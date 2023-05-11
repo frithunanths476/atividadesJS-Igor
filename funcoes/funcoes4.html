@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União de duas listas</title>
+</head>
+<body>
+    <script>
+
+        function uniao(lista1, lista2){
+            for(var i = 0; i < lista2.length; i++){
+                var elementoPresente = false
+                for(var j = 0; j < lista1.length; j++){
+                    if(lista2[i] === lista1[j]){
+                        elementoPresente = true
+                        break
+                    }
+                }
+                if(!elementoPresente){
+                    lista1.push(lista2[i])
+                }
+            }
+            return lista1
+        }
+
+        var lista1 = [1,2,3,4]
+        var lista2 = [3,4,5,6]
+        var listaUniao = uniao(lista1, lista2)
+        console.log(listaUniao)
+
+    </script>
+</body>
+</html>

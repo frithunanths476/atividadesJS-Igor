@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto de duas matrizes</title>
+</head>
+<body>
+    <script>
+
+        var matriz1 =
+        [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+
+        var matriz2 =
+        [
+            [10,11,12],
+            [13,14,15],
+            [16,17,18]
+        ]
+
+        var resultado = []
+
+        for(var i = 0; i < matriz1.length; i++){
+            resultado[i] = []
+            for(var j = 0; j < matriz2[0].length; j++){
+                var soma = 0
+                for(var k = 0; k < matriz2.length; k++){
+                    soma += matriz1[i][k] * matriz2[k][j]
+                }
+                resultado[i][j] = soma
+            }
+        }
+
+        console.log(resultado)
+
+    </script>
+</body>
+</html>

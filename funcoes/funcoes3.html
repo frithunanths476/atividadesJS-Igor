@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interseção de duas listas</title>
+</head>
+<body>
+    <script>
+
+        function intersecao(lista1, lista2){
+            var listaIntersecao = []
+            for(var i = 0; i < lista1.length; i++){
+                for(var j = 0; j < lista2.length; j++){
+                    if(lista1[i] === lista2[j]){
+                        listaIntersecao.push(lista1[i])
+                        break
+                    }
+                }
+            }
+            return listaIntersecao
+        }
+
+        var lista1 = [1,2,3,4,5]
+        var lista2 = [3,5,7,9]
+        var listaIntersecao = intersecao(lista1, lista2)
+        console.log(listaIntersecao)
+
+    </script>
+</body>
+</html>
